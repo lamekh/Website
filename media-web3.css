@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Gotu', sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+      margin: 0;
+  }
+
+.bimage {
+    background-image: url("./pictures/concrete-texture.png");
+    background-size: cover;
+  background-position: right bottom, left top;
+  height: auto;
+  width: auto;
+}
+
+.upper-box {
+  border: 3px none;
+  width: auto;
+  height: auto;
+  margin: auto;
+  background-color: rgba(222, 231, 231, 0.8);
+  padding: 0%;
+}
+
+.border {
+    width: auto;
+    height: auto;
+    background-color: rgb(33, 24, 68);
+}
+
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content .dropdown:active {
+    display: block;
+  }
+
+.title {
+    font-family: gotu;
+    color: #e5e3ee;
+    text-align: center;
+    font-weight: bolder;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+}
+
+#drop-menu {
+    color: rgb(223, 215, 215);
+    background-color: lightslategrey;
+}
+
+#main-navi {
+    font-family: gotu;
+
+}
+
+#nav-links-border {
+    padding-left: 31.5%;
+}
+
+li{
+    padding-right: 20px;
+    margin: auto;
+}
+
+
+#photo-captions {
+    font-family: gotu;
+    color: rgb(10, 10, 37);
+}
+/* about us section */
+
+.who-we-are {
+  color: rgb(238, 231, 190);
+}
+
+/* our team section */
+
+.passport {
+  height: 300px;
+  width: auto;
+}
+
+.name {
+  color: #e5e3ee;
+  font-size: 23px;
+}
+
+.work {
+  font-size: 16px;
+  background-color: none;
+  color: bisque;
+}
+
+.to-do {
+  color: rgb(228, 238, 203);
+  font-size: 18px;
+}
+
+
+.member-name, .occupation{
+    border: 1px solid none;
+    background-color: rgba(39, 18, 18, 0.5);
+    color: rgb(255, 255, 255);
+    width: fit-content;
+    margin: auto;
+    padding: 5px;
+
+ 
+.footer {
+    color: rgb(18, 14, 41);
+    font-family: gotu;
+    text-align: center;
+ }
+ 
+ .email {
+   font-family: gotu;
+   color: darkblue;
+   font-size: 30px;
+   text-decoration: none;
+ }
+
+ 
+
+ 
+ #contact-us {
+   font-size: 30px;
+   font-family: gotu;
+ }
+
+ .footer-para {
+   font-size: 10px;
+ }
+
+ #copyright {
+   font-size: 5px;
+ }
+
+ /* gallery SCC properties */
+
+ 
+
+
+
+
+  
+ 
+
+  
+  
+  
+  
