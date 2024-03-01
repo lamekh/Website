@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+
+  <script src="https://use.fontawesome.com/7bfc5a1c66.js"></script>  
+  <script src="https://kit.fontawesome.com/d32b56e4b3.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="media-web.css" type="text/css" rel="stylesheet">
+  <title>Lamekh Photography Gallery</title>
+  <link rel="shortcut icon" href="./shoots/LamekH Photography logo.gif"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px;
+	  background-color: rgb(33, 24, 68)
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-gap: 20px;
+      background-color: grey; /* Set the background color here */
+      padding: 15px;
+    }
+    .gallery-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 300px; /* Set the desired height here */
+      /* background-color: darkorange; /* Set the background color here */
+    }
+    .gallery-item img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      cursor: pointer;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .modal-content {
+      display: block;
+      margin: auto;
+      width: 80%;
+      max-width: 800px;
+      max-height: 80%;
+      overflow: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .modal-content img {
+      width: 100%;
+      height: auto;
+    }
+    .close {
+      color: #fff;
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+      
+	.view-more-btn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-decoration: none;
+	  text-align: center;
+		
+	/* Remove default link underline */
+    }
+    .view-more-btn:hover {
+      background-color: #45a049; /* Darken the button color on hover */
+    }
+	  
+    h1{
+      text-align: center;
+    }
+    .close:hover,
+    .close:focus {
+      color: #ccc;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    #viewMoreBtn {
+      display: none; /* Initially hide the View More button */
+      margin: 20px auto; /* Added some margin for better spacing */
+    }
+  </style>
+</head>
+
+<body>
+	
+	
+<div>
+
+        <div class="bimage">
+        <div class="upper-box">
+                
+<div class=" container border">
+
+<nav style="background-color: rgb(33, 24, 68);" class="navbar navbar-dark navbar-expand-lg container sticky-top" id="main-navi">
+
+                <a class="navbar-brand" id="home" href="index.html">
+                    <img src="LamekH Photography logo.png" width="27" height="27" class="d-inline-block align-top" alt="">
+                    LamekH Photography
+                </a>
+                
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto container" id="nav-links-border">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html#services">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact-form.html">Booking</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html#team">Team</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Contact
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="drop-menu">
+          <a class="dropdown-item" href="tel:+264816323668">Call us</a>
+          <a class="dropdown-item" href="mailto:kanyangelalamek@gmail.com">Email us</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="index.html#follow-us">Social Media</a>
+        </div>
+      </li>
+    </ul>
+ </div>
+
+</nav>
+
+
+
+          <div class="who-we-are alert alert-primary justify-content-center text-center" id="about" style="font-family: gotu; background-image:url(./bg-pics/wintry.jpg); border: none;" role="alert">
+            <br>
+            <br>
+          
+	
+
+<div class="container">
+  <h1>Portrait Gallery</h1>
+  <div class="gallery">
+    <!-- Initially display 8 images -->
+    <div class="gallery-item">
+      <img src="PORTRAIT/DSC0244-2.jpg" alt="Photo 1" onclick="openModal(this.src)">
+    </div>
+	  
+	<div class="gallery-item">
+      <img src="PORTRAIT/DSC0463-2.jpg" alt="Photo 2" onclick="openModal(this.src)">
+    </div>
+	  
+	<div class="gallery-item">
+      <img src="PORTRAIT/DSC0194-2.jpg" alt="Photo 3" onclick="openModal(this.src)">
+    </div>
+	  
+	<div class="gallery-item">
+      <img src="PORTRAIT/DSC0220.jpg" alt="Photo 4" onclick="openModal(this.src)">
+    </div>
+	  
+	
+
+	<a href="PORTRAIT.html" class="view-more-btn">View More</a>
+
+    <!-- Repeat this block for the remaining 7 images -->
+
+  </div>
+  <!-- View More button -->
+  <button id="viewMoreBtn" onclick="showMore()">View More</button>
+</div>
+
+
+	
+
+
+<div class="container">
+  <h1>Event Gallery</h1>
+  <div class="gallery">
+    <!-- Initially display 8 images -->
+    <div class="gallery-item">
+      <img src="EVENT/IMG_9025-2.jpg" alt="Photo 1" onclick="openModal(this.src)">
+    </div>
+	  
+	<div class="gallery-item">
+      <img src="EVENT/DSC0184-2.jpg" alt="Photo 2" onclick="openModal(this.src)">
+    </div>
+	  
+	<div class="gallery-item">
+      <img src="EVENT/DSC0500-2.jpg" alt="Photo 3" onclick="openModal(this.src)">
+    </div>
+	  
+	<div class="gallery-item">
+      <img src="EVENT/IMG_202402291941470.jpg" alt="Photo 4" onclick="openModal(this.src)">
+    </div>
+	
+
+	<a href="EVENT.html" class="view-more-btn">View More</a>
+
+    <!-- Repeat this block for the remaining 7 images -->
+
+  </div>
+  <!-- View More button -->
+  <button id="viewMoreBtn" onclick="showMore()">View More</button>
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImg" onclick="event.stopPropagation()">
+</div>
+	
+<div class="container">
+  <h1>Drone Shot Gallery</h1>
+  <div class="gallery">
+    <!-- Initially display 8 images -->
+    <div class="gallery-item">
+      <img src="DRONE SHOTS/IMG_202402291952070.jpg" alt="Photo 1" onclick="openModal(this.src)">
+    </div>
+	  
+	<div class="gallery-item">
+      <img src="DRONE SHOTS/DJI_0009-2.jpg" alt="Photo 2" onclick="openModal(this.src)">
+    </div>
+	  
+	<div class="gallery-item">
+      <img src="DRONE SHOTS/IMG_202402291952072.jpg" alt="Photo 3" onclick="openModal(this.src)">
+    </div>
+	  
+	<div class="gallery-item">
+      <img src="DRONE SHOTS/IMG_202402291952071.jpg" alt="Photo 4" onclick="openModal(this.src)">
+    </div>
+	
+
+	<a href="DRONE SHOTS.html" class="view-more-btn">View More</a>
+
+    <!-- Repeat this block for the remaining 7 images -->
+
+  </div>
+  <!-- View More button -->
+  <button id="viewMoreBtn" onclick="showMore()">View More</button>
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImg" onclick="event.stopPropagation()">
+</div>
+
+<div class="container">
+  <h1>Landscape Gallery</h1>
+  <div class="gallery">
+    <!-- Initially display 8 images -->
+    <div class="gallery-item">
+      <img src="LANDSCAPE/DSC0609.jpg" alt="Photo 1" onclick="openModal(this.src)">
+    </div>
+	  
+	<div class="gallery-item">
+      <img src="LANDSCAPE/DSC0586.jpg" alt="Photo 2" onclick="openModal(this.src)">
+    </div>
+	  
+	<div class="gallery-item">
+      <img src="LANDSCAPE/DSC0590.jpg" alt="Photo 3" onclick="openModal(this.src)">
+    </div>
+	  
+	<div class="gallery-item">
+      <img src="LANDSCAPE/DSC0547.jpg" alt="Photo 4" onclick="openModal(this.src)">
+    </div>
+	
+
+	<a href="LANDSCAPE.html" class="view-more-btn">View More</a>
+
+    <!-- Repeat this block for the remaining 7 images -->
+
+  </div>
+  <!-- View More button -->
+  <button id="viewMoreBtn" onclick="showMore()">View More</button>
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImg" onclick="event.stopPropagation()">
+</div>
+
+
+<div class="container">
+  <h1>Freelancing Gallery</h1>
+  <div class="gallery">
+    <!-- Initially display 8 images -->
+    <div class="gallery-item">
+      <img src="/FREELANCING/DSC0552.jpg" alt="Photo 1" onclick="openModal(this.src)">
+    </div>
+	  
+	<div class="gallery-item">
+      <img src="/FREELANCING/DSC0681.jpg" alt="Photo 2" onclick="openModal(this.src)">
+    </div>
+	  
+	<div class="gallery-item">
+      <img src="/FREELANCING/DSC0688.jpg" alt="Photo 3" onclick="openModal(this.src)">
+    </div>
+	  
+	<div class="gallery-item">
+      <img src="/FREELANCING/DSC0552.jpg" alt="Photo 4" onclick="openModal(this.src)">
+    </div>
+	
+
+	<a href="FREELANCING.html" class="view-more-btn">View More</a>
+
+    <!-- Repeat this block for the remaining 7 images -->
+
+  </div>
+  <!-- View More button -->
+  <button id="viewMoreBtn" onclick="showMore()">View More</button>
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImg" onclick="event.stopPropagation()">
+</div>
+	
+	
+<script>
+  // Initially hide the View More button
+  document.getElementById('viewMoreBtn').style.display = 'none';
+
+  // Function to display more images
+  function showMore() {
+    var galleryItems = document.querySelectorAll('.gallery-item');
+    // Loop through the next 10 items and make them visible
+    for (var i = 8; i < 18; i++) {
+      if (i < galleryItems.length) {
+        galleryItems[i].style.display = 'flex'; // Display the hidden items
+      } else {
+        // Hide the View More button if all images are displayed
+        document.getElementById('viewMoreBtn').style.display = 'none';
+        break;
+      }
+    }
+  }
+
+  // Function to open the modal
+  function openModal(src) {
+    document.getElementById("modalImg").src = src;
+    document.getElementById("myModal").style.display = "block";
+  }
+
+  // Function to close the modal
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
