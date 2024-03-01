@@ -380,6 +380,18 @@
   function closeModal() {
     document.getElementById("myModal").style.display = "none";
   }
+
+  function closeModal() {
+    document.getElementById('myModal').style.display = "none";
+  }
+
+  // Function to close modal when ESC key is pressed
+  document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+  
 </script>
 
 </body>
