@@ -66,12 +66,14 @@
     }
     .modal-content {
 	display: block;
-	max-width: 90vw;  /* Limit width to 90% of viewport */
-	max-height: 90vh; /* Limit height to 90% of viewport */
-	object-fit: contain; /* Ensures the image is fully visible without distortion */
+	max-width: 90vw;
+	max-height: 90vh;
+	object-fit: contain;
 	margin: auto;
-	background-color: transparent; /* Removes white background */
-    }
+	background: none !important;
+	border: none; /* Remove any outlines */
+	padding: 0; /* Ensure no extra space */
+	}
     .modal-content img {
       width: auto;
       height: auto;
