@@ -77,14 +77,12 @@
 }
 
 .modal-content img {
-  width: auto;  /* Keeps original width */
-  max-width: 100%; /* Prevents going beyond the modal */
-  height: auto; /* Maintains aspect ratio */
-  max-height: 80vh; /* Ensures it fits within the screen height */
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the image fits inside the modal without stretching */
   display: block;
   margin: auto;
 }
-
 
 .close {
   color: #fff;
