@@ -1,18 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
-      <loc>https://www.lamekhphotography.com/</loc>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-   </url>
-   <url>
-      <loc>https://www.lamekhphotography.com/gallery</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://www.lamekhphotography.com/contact</loc>
-      <changefreq>monthly</changefreq>
-      <priority>0.6</priority>
-   </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+<url>
+<loc>https://www.lamekhphotography.com/</loc>
+<lastmod>2025-02-17T16:21:38+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://www.lamekhphotography.com/contact-form.html</loc>
+<lastmod>2025-02-17T16:21:38+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.lamekhphotography.com/LamekH%20Gallery.html</loc>
+<lastmod>2025-02-17T16:21:38+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://www.lamekhphotography.com/index.html</loc>
+<lastmod>2025-02-17T16:21:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.lamekhphotography.com/PORTRAIT.html</loc>
+<lastmod>2025-02-17T16:21:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.lamekhphotography.com/EVENT.html</loc>
+<lastmod>2025-02-17T16:21:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.lamekhphotography.com/DRONE%20SHOTS.html</loc>
+<lastmod>2025-02-17T16:21:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.lamekhphotography.com/LANDSCAPE.html</loc>
+<lastmod>2025-02-17T16:21:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://www.lamekhphotography.com/FREELANCING.html</loc>
+<lastmod>2025-02-17T16:21:38+00:00</lastmod>
+<priority>0.64</priority>
+</url>
 </urlset>
