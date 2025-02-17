@@ -54,45 +54,43 @@
       height: auto;
       cursor: pointer;
     }
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Dims background when image is clicked */
-}
-
-.modal-content {
-  display: block;
-  max-width: 80%;
-  max-height: 80%;
-  margin: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.modal-content img {
-  width: auto;
-  height: auto;
-
-}
-
-.close {
-  color: #fff;
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .modal-content {
+      display: block;
+      margin: auto;
+      width: 80%;
+      max-width: 800px;
+      max-height: 80%;
+      overflow: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .modal-content img {
+      width: 100%;
+      height: auto;
+    }
+    .close {
+      color: #fff;
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
       
-.view-more-btn {
+	.view-more-btn {
       padding: 10px 20px;
       background-color: #4CAF50;
       color: white;
@@ -263,33 +261,49 @@
 </div>	
 
 	
+
 	
 	
 <script>
+  // Initially hide the View More button
+  document.getElementById('viewMoreBtn').style.display = 'none';
 
-function openModal(src) {
+  // Function to display more images
+  function showMore() {
+    var galleryItems = document.querySelectorAll('.gallery-item');
+    // Loop through the next 10 items and make them visible
+    for (var i = 8; i < 18; i++) {
+      if (i < galleryItems.length) {
+        galleryItems[i].style.display = 'flex'; // Display the hidden items
+      } else {
+        // Hide the View More button if all images are displayed
+        document.getElementById('viewMoreBtn').style.display = 'none';
+        break;
+      }
+    }
+  }
+
+  // Function to open the modal
+  function openModal(src) {
     document.getElementById("modalImg").src = src;
     document.getElementById("myModal").style.display = "block";
-}
+  }
 
-// Function to close the modal
-function closeModal() {
+  // Function to close the modal
+  function closeModal() {
     document.getElementById("myModal").style.display = "none";
-}
+  }
 
-// Close modal when clicking anywhere outside the image
-document.getElementById("myModal").addEventListener("click", function (event) {
-    if (event.target === this) {
-        closeModal();
-    }
-});
+  function closeModal() {
+    document.getElementById('myModal').style.display = "none";
+  }
 
-// Close modal when ESC key is pressed
-document.addEventListener("keydown", function(event) {
+  // Function to close modal when ESC key is pressed
+  document.addEventListener('keydown', function(event) {
     if (event.key === "Escape") {
-        closeModal();
+      closeModal();
     }
-});
+  });
 
 </script>
 
