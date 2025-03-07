@@ -4,6 +4,14 @@
 
       <head>
 
+            <!-- to redirect http to https -->
+            <script>
+              if (window.location.protocol !== "https:") {
+              window.location.href = "https://" + window.location.hostname + window.location.pathname + window.location.search;
+                    }
+              </script>
+
+
             <!-- SEO General -->
             <meta name="title" content="LamekH Photography | Best Photography in Namibia">
             <meta name="description" content="LamekH Photography offers professional photography services in Namibia. Book your next photoshoot for weddings, portraits, events, and more!">
